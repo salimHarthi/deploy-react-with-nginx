@@ -41,6 +41,7 @@ Open krim.com in an editor of your choice and paste the following.
 You can safely use an ip address here.
 You can also use both ip and domain.
 you can copy the folowing code and change things in the bracket
+##### For test deployment Without https
 ```
 server {
   listen [port]; ## put your port number example 80
@@ -48,6 +49,7 @@ server {
   server_name [server IP]; ## put your server IP example 111.111.111.111
   root /var/www/[your project name]/build;
   index index.html index.htm;
+  client_max_body_size 100M; ## size of files can be sent in the body
 
   access_log /var/log/nginx/[name of your website].com.access.log;
   error_log /var/log/nginx/[name of your website].com.error.log;
@@ -56,6 +58,25 @@ server {
   }
 }
 ```
+##### With https
+```
+server {
+  listen 443 ssl;
+  listen [::]:443 ssl;
+  server_name [website url]; ## put your website url example oman.com remove this line if you dont have url
+  server_name [server IP]; ## put your server IP example 111.111.111.111
+  root /var/www/[your project name]/build;
+  index index.html index.htm;
+  client_max_body_size 100M; ## size of files can be sent in the body
+
+  access_log /var/log/nginx/[name of your website].com.access.log;
+  error_log /var/log/nginx/[name of your website].com.error.log;
+  location / {
+    try_files $uri /index.html =404;
+  }
+}
+```
+
 ## step #5
 Symlink config
 Nginx needs to be told that a given site is active. To do this, create a symlink in sites-enabled
