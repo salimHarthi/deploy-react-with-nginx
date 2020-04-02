@@ -110,6 +110,6 @@ sudo service nginx restart
 And you’re done! If you go to your browser and type in the IP address of your server or your domain, you should see your React app live!
 
 # sources
-https://medium.com/@timmykko/deploying-create-react-app-with-nginx-and-ubuntu-e6fe83c5e9e7
-https://codeburst.io/how-to-setup-nginx-for-react-a504f38f95ed
+* https://medium.com/@timmykko/deploying-create-react-app-with-nginx-and-ubuntu-e6fe83c5e9e7
+* https://codeburst.io/how-to-setup-nginx-for-react-a504f38f95ed
 
