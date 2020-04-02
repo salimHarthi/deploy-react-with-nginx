@@ -94,7 +94,7 @@ Constantly using sudo increases the chances of accidentally trashing your system
 ```
 sudo gpasswd -a "$USER" www-data
 sudo chown -R "$USER":www-data /var/www/[your project name]
-find /var/www[your project name] -type f -exec chmod 0660 {} \;
+find /var/www/[your project name] -type f -exec chmod 0660 {} \;
 sudo find /var/www/[your project name] -type d -exec chmod 2770 {} \;
 ```
 ## step #7
