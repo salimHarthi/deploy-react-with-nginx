@@ -30,6 +30,19 @@ npm i serve -g
 serve -s build
 ```
 ## step #4
+got to your project directery
+```
+cd /var/www/[your project name]
+```
+Since you wouldn’t want to use sudo every time you interact with files in /var/www/[your project name], let’s give your user privileges to these folders. 
+Constantly using sudo increases the chances of accidentally trashing your system.
+```
+sudo gpasswd -a "$USER" www-data
+sudo chown -R "$USER":www-data /var/www/[your project name]
+find /var/www/[your project name] -type f -exec chmod 0660 {} \;
+sudo find /var/www/[your project name] -type d -exec chmod 2770 {} \;
+```
+## step #5
 Create a new site in sites available
 this command will create a file that you can edit
 ```
@@ -77,25 +90,12 @@ server {
 }
 ```
 
-## step #5
+## step #6
 Symlink config
 Nginx needs to be told that a given site is active. To do this, create a symlink in sites-enabled
 ```
 cd /etc/nginx/sites-enabled
 ln -s ../sites-available/[name of your website].com .
-```
-## step #6
-got to your project directery
-```
-cd /var/www/[your project name]
-```
-Since you wouldn’t want to use sudo every time you interact with files in /var/www/[your project name], let’s give your user privileges to these folders. 
-Constantly using sudo increases the chances of accidentally trashing your system.
-```
-sudo gpasswd -a "$USER" www-data
-sudo chown -R "$USER":www-data /var/www/[your project name]
-find /var/www/[your project name] -type f -exec chmod 0660 {} \;
-sudo find /var/www/[your project name] -type d -exec chmod 2770 {} \;
 ```
 ## step #7
 
