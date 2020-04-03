@@ -1,4 +1,23 @@
 # These are the steps to deploy react app with nginx
+## If you don't have nodejs
+To get this version, you can use the apt package manager. Refresh your local package index by typing:
+```
+sudo apt update
+```
+install nodejs and npm if you dont have them in the server
+```
+sudo apt install nodejs
+sudo apt install npm
+```
+
+To check which version of Node.js 
+```
+nodejs -v
+```
+To check which version of npm
+```
+npm -v
+```
 
 ## step #1
 
