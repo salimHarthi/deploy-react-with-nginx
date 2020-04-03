@@ -29,11 +29,8 @@ npm i
 npm i serve -g
 serve -s build
 ```
-## step #4
-got to your project directery
-```
-cd /var/www/[your project name]
-```
+## step #4 you can skip this part if you are root
+In your project directery
 Since you wouldn’t want to use sudo every time you interact with files in /var/www/[your project name], let’s give your user privileges to these folders. 
 Constantly using sudo increases the chances of accidentally trashing your system.
 ```
