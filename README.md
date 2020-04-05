@@ -114,7 +114,10 @@ cd /etc/nginx/sites-enabled
 ln -s ../sites-available/[name of your website].com .
 ```
 ## step #7
-
+check if your configuration is ok
+```
+sudo nginx -t
+```
 Now start up Nginx!
 ```
 sudo service nginx start
