@@ -36,6 +36,7 @@ cd /var/www/[your project name]
 ## step #3
 run the following commands to build your react app
 ```
+npm install -g create-react-app
 npm i
 npm i serve -g
 npm run build
@@ -44,6 +45,7 @@ serve -s build
 #### OR 
 build it on your machine and run
 ```
+npm install -g create-react-app
 npm i
 npm i serve -g
 serve -s build
