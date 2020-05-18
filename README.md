@@ -92,6 +92,7 @@ server {
 ##### With https
 ```
 server {
+  listen *:80;
   listen 443 ssl;
   listen [::]:443 ssl;
   server_name [website url]; ## put your website url example oman.com remove this line if you dont have url
