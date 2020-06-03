@@ -68,7 +68,7 @@ cd /etc/nginx/sites-available
 nano [name of your website].com
 ```
 Configure new site
-Open krim.com in an editor of your choice and paste the following. 
+Open [name of your website].com in an editor of your choice and paste the following. 
 You can safely use an ip address here.
 You can also use both ip and domain.
 you can copy the folowing code and change things in the bracket
